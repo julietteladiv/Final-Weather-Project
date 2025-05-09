@@ -1,24 +1,28 @@
-let now = new Date();
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-let hours = now.getHours();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
 
-let currentDay = document.querySelector("#day");
-currentDay.innerHTML = day;
-let currentTime = document.querySelector("#time");
-currentTime.innerHTML = `${hours}:${minutes}`;
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 
 function DisplayForecast(response) {
   let newCity = document.querySelector("#location");
@@ -27,6 +31,10 @@ function DisplayForecast(response) {
   let newTemperature = document.querySelector("#temperature");
   let newDescription = document.querySelector("#description");
   let newImage = document.querySelector("#image");
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+  let newDay = document.querySelector("#day");
+  newDay.innerHTML = formatDay(date);
 
   newCity.innerHTML = response.data.city;
   newHumidity.innerHTML = `${response.data.temperature.humidity} %`;
@@ -34,6 +42,7 @@ function DisplayForecast(response) {
   newTemperature.innerHTML = Math.round(response.data.temperature.current);
   newDescription.innerHTML = response.data.condition.description;
   newImage.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
+  timeElement.innerHTML = formatDate(date);
   console.log(response.data);
 }
 function getApi(city) {
@@ -48,5 +57,6 @@ function changeCity(event) {
 
   getApi(input.value);
 }
+
 let form = document.querySelector("#form");
 form.addEventListener("submit", changeCity);
