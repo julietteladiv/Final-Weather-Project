@@ -9,7 +9,7 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="form">
           <input
             type="text"
             placeholder="Enter a city"
@@ -19,7 +19,7 @@
             class="search-form-input"
           />
           <input
-            type="button"
+            type="submit"
             value="Search"
             id="search-form-button"
             class="search-form-button"
@@ -27,19 +27,24 @@
         </form>
       </header>
       <h1>
-        5-Day Weather- <span class="location">Paris</span>
-        <div class="time">as 8:15</div>
+        5-Day Weather- <span class="location" id="location">Paris</span>
+        <div class="time" >as <span id="time">8:15</span></div>
       </h1>
-      <p>
         <div class="weather-app-data">
           <div class="weather-app-data-text">
-        Friday, Clear sky  <br>
+        <span id="day">Friday</span>, Clear sky  <br>
         Humidity: <strong>53%</strong>, wind:<strong>4.63km/h</strong></div>
-        <div class="weather-app-data-temp">☀️ 13°C</div>
-      </p>
+        <div class="weather-app-data-temp">
+          <span class="weather-app-data-emoji">☀️</span> 13<span class="weather-app-data-degres">°C</span></div>
            </div>
           </br>
-      <div class="forecast">Fri <br />☀️ <br />21°C 10°C</div>
+      <div class="forecast-5days">
+        <div class="forecast-day">Fri <br />☀️ <br />21°C 10°C</div>
+        <div class="forecast-day">Sat <br />☀️ <br />21°C 10°C</div>
+        <div class="forecast-day">Sun <br />☀️ <br />21°C 10°C</div>
+        <div class="forecast-day">Mon <br />☀️ <br />21°C 10°C</div>
+
+          <div class="forecast-day">Tue <br />☀️ <br />21°C 10°C</div></div>
       <br />
       <footer>
         This project was coded by
