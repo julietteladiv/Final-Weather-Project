@@ -48,5 +48,35 @@ a {
   justify-content: space-between;
 }
 .weather-app-data-temp {
-  font-size: 36px;
+  font-size: 88px;
+  display: flex;
+  justify-content: space-around;
+}
+.weather-app-data-degres {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.weather-app-data-emoji {
+  font-size: 48px;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+.weather-app-data-text {
+  margin-top: 40px;
+}
+.forecast-5days {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px auto;
+}
+.forecast-day {
+  margin: auto;
+  text-align: center;
+}
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #9fd3c7;
+  padding: 0 30px 0 0;
+  padding-top: 20px;
 }
