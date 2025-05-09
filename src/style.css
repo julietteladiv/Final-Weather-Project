@@ -43,3 +43,10 @@ a {
   font-size: 16px;
   font-weight: lighter;
 }
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+.weather-app-data-temp {
+  font-size: 36px;
+}
