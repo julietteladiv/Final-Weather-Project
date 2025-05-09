@@ -26,11 +26,14 @@ function DisplayForecast(response) {
   let newWind = document.querySelector("#wind");
   let newTemperature = document.querySelector("#temperature");
   let newDescription = document.querySelector("#description");
+  let newImage = document.querySelector("#image");
+
   newCity.innerHTML = response.data.city;
   newHumidity.innerHTML = `${response.data.temperature.humidity} %`;
   newWind.innerHTML = `${response.data.wind.speed} km/h`;
   newTemperature.innerHTML = Math.round(response.data.temperature.current);
   newDescription.innerHTML = response.data.condition.description;
+  newImage.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
   console.log(response.data);
 }
 function getApi(city) {
