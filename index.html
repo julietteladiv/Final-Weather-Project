@@ -8,6 +8,9 @@
        <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
+    <div class="darkTheme">
+      <button class="themeButton" id="themeButton">Change Theme</button>
+    </div>
     <div class="weather-app">
       <header>
         <form class="search-form" id="form">
@@ -28,24 +31,27 @@
         </form>
       </header>
       <h1>
-        5-Day Weather- <span class="location" id="location">Paris</span>
-        <div class="time" >as <span id="time">8:15</span></div>
+        5-Day Weather- <span class="location" id="location"></span>
+        <div class="time" >as <span id="time"></span></div>
       </h1>
         <div class="weather-app-data">
           <div class="weather-app-data-text">
-        <span id="day">Friday</span>, <span id="description">Clear sky</span>  <br>
-        Humidity: <strong id="humidity"> 53%</strong>, wind:<strong id="wind" > 4.63km/h</strong></div>
+        <span id="day"></span>, <span id="description">Clear sky</span>  <br>
+        Humidity: <strong id="humidity"> </strong>, wind:<strong id="wind" > </strong></div>
         <div class="weather-app-data-temp">
-          <span class="weather-app-data-emoji" id="image">☀️</span > <span id="temperature">13</span><span class="weather-app-data-degres">°C</span></div>
+          <span class="weather-app-data-emoji" id="image"></span > <span id="temperature"></span><span class="weather-app-data-degres">°C</span></div>
            </div>
           </br>
-      <div class="forecast-5days">
-        <div class="forecast-day">Fri <br />☀️ <br />21°C 10°C</div>
-        <div class="forecast-day">Sat <br />☀️ <br />21°C 10°C</div>
-        <div class="forecast-day">Sun <br />☀️ <br />21°C 10°C</div>
-        <div class="forecast-day">Mon <br />☀️ <br />21°C 10°C</div>
-
-          <div class="forecast-day">Tue <br />☀️ <br />21°C 10°C</div></div>
+      <div class="forecast-5days" id="forecast"></div>
+        <div class="forecast-day">
+          <div class="weather-forecast-icon"></div>
+          <div class="weather-forecast-temperatures"> 
+            <div class="weather-forecast-temperature"> 
+            <strong></strong> </div>
+            <div class="weather-forecast-temperature"></div> </div> 
+          </div>
+         
+     
       <br />
       <footer>
         This project was coded by

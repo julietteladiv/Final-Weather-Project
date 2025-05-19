@@ -76,6 +76,7 @@ a {
 .forecast-day {
   margin: auto;
   text-align: center;
+  margin-bottom: 10px;
 }
 footer {
   margin-top: 20px;
@@ -86,4 +87,69 @@ footer {
 }
 strong {
   color: #9fd3c7;
+}
+
+.weather-forecast-icon {
+  font-size: 38px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #f65282;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+.themeButton {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+  border: 2px solid #9fd3c7;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+  font-size: 12px;
+}
+button:hover {
+  background-color: #9fd3c7;
+  color: #142d4c;
+  cursor: pointer;
+  border: 2px solid #142d4c;
+}
+
+.darktheme:hover {
+  background: white;
+  color: white;
+  cursor: pointer;
+}
+.dark {
+  background: linear-gradient(
+    89.7deg,
+    rgb(0, 0, 0) -10.7%,
+    rgb(53, 92, 125) 88.8%
+  );
+  color: white;
+}
+
+.dark .themeButton {
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.dark .weather-app {
+  background: #142d4c;
+  color: white;
+}
+.dark .form-button {
+  background-color: #142d4c;
+  border: #ffffff;
+}
+.dark .location {
+  color: white;
+}
+.dark a {
+  color: #f65282;
 }
